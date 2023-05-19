@@ -18,7 +18,7 @@ Additionally, it is necessary to specify the environment variable `HF_HOME`, i.e
 
 ## Example
 
-To run AuT-Few on the classification datasets, simply run the following script. Datasets and model pre-trained model weights are loaded automatically: 
+To run AuT-Few on the classification datasets explored in the paper, simply run the following script. Datasets and pre-trained model weights are downloaded automatically: 
 
 ```
 cd experiments
