@@ -59,10 +59,7 @@ class TFewModel(pl.LightningModule):
         gradient_checkpointing: Optional[bool] = False,
         pretrained: Optional[bool] = True,
         majority_voting: Optional[bool] = False,
-        current_ensemble_iteration = 0,
-        num_ensembles = 1,
         calibrate_templates = False,
-        one_sample_at_a_time = False,
     ):
         """
         Load a pretrained T5-based text transformer backbone.
@@ -96,7 +93,7 @@ class TFewModel(pl.LightningModule):
 
         self.checkpoint_name = checkpoint_name
 
-        print(self.checkpoint_name)
+        print("Loading Checkpoint: ", self.checkpoint_name)
         self.num_classes = num_classes
 
         self.config = AutoConfig.from_pretrained(checkpoint_name)
@@ -126,8 +123,6 @@ class TFewModel(pl.LightningModule):
         self.padding_token = -100 if "BART0" not in self.checkpoint_name else -1
         self.encoder = self.model.encoder if "BART0" not in self.checkpoint_name else self.model.get_encoder()
 
-        print("CURRENT PADDING TOKEN", self.padding_token)
-
         self.mc_loss = mc_loss
         self.unlikely_loss = unlikely_loss
         self.length_norm = length_norm
@@ -135,12 +130,9 @@ class TFewModel(pl.LightningModule):
         self.name_to_id = self.get_layer_ids()
         self.head_layer_names = [n for n, layer_id in self.name_to_id.items() if layer_id == 0]
 
-        self.one_sample_at_a_time = one_sample_at_a_time
         self.majority_voting = majority_voting
-        self.total_ensembles = num_ensembles
 
         self.layers_to_update = None
-        self.current_ensemble_iteration = current_ensemble_iteration
         self.current_template = 0
 
         self.calibrate_templates = calibrate_templates
@@ -199,7 +191,6 @@ class TFewModel(pl.LightningModule):
         
         summed_nll_tensor = torch.FloatTensor(summed_nll)
         summed_nll_tensor_softmax = torch.nn.functional.softmax(summed_nll_tensor)
-        print(summed_nll_tensor_softmax) 
 
         self.set_template_weights(summed_nll_tensor_softmax)
 
@@ -223,8 +214,6 @@ class TFewModel(pl.LightningModule):
             cand_loglikely += (lm_target < 0).view(bs, num_choices, -1) * self.padding_token
             cand_loglikely[range(bs), label] = self.padding_token
             unlikely_loss = -torch.log(1 - torch.exp(cand_loglikely) + 1e-2).sum() / (cand_loglikely != self.padding_token).sum()
-            
-            # nll = -(F.cross_entropy(choices_scores, label) + F.cross_entropy(target_template_logits.view(bs, num_choices, *target_template_logits.size()[1:])[range(bs), label].flatten(0, 1),lm_target.view(bs, num_choices, -1)[range(bs), label].flatten(0, 1)) + unlikely_loss)
 
             nll = -(F.cross_entropy(choices_scores, label) + unlikely_loss)
 
@@ -262,8 +251,6 @@ class TFewModel(pl.LightningModule):
 
             sorted_v, indices = torch.sort(value_nw, descending=True)
 
-            print(self.tokenizer.decode(indices[:top_k]))
-
             for count, val in enumerate(sorted_v[:1000]):
                 if self.tokenizer.decode(indices[count]).lower() in STOP_WORDS or self.tokenizer.decode(indices[count]).lower() in PUNCTUATION or self.tokenizer.decode(indices[count]).lower() == " " or self.tokenizer.decode(indices[count]).lower() in ["<pad>", "<s>", "</s>"]:
                     continue
@@ -283,8 +270,6 @@ class TFewModel(pl.LightningModule):
                     for l, ind2 in enumerate(index_2):
                         if ind == ind2:
                             same_indices.append((i, j, k, l))
-        
-        print(same_indices)
 
         y_ind = [ele for ele in product(range(0, top_k), repeat = self.num_classes)]
 
@@ -497,12 +482,9 @@ class TFewModel(pl.LightningModule):
                     break
                 num_templates +=1
 
-            if self.one_sample_at_a_time:
-                current_template = 0
-            else:
-                current_template = batch[self.current_template_key].tolist()[0]
+            current_template = batch[self.current_template_key].tolist()[0]
 
-            self.set_current_template_in_network(self.current_ensemble_iteration)
+            self.set_current_template_in_network(0)
 
             current_content_key = self.text_token_ids_key + "_" + str(current_template)
             current_choices_key = self.choices_key + "_" + str(current_template)
@@ -524,7 +506,7 @@ class TFewModel(pl.LightningModule):
                     if current_content_key not in batch:
                         break
 
-                    for curr_it in range(self.total_ensembles):
+                    for curr_it in range(1): #TODO: OUTDATED, remove ensemble part.
                         self.set_current_template_in_network(curr_it) # just for setting the current ensemble
                         choices_scores, model_output, target_template_logits, lm_target, text_valid_length, encoder_hidden_states_or = self.single_pass(batch, current_content_key, current_choices_key)
                         if self.template_weights != None:
@@ -538,21 +520,12 @@ class TFewModel(pl.LightningModule):
                 current_content_key = self.text_token_ids_key + "_" + str(i)
                 current_choices_key = self.choices_key + "_" + str(i)
                 
-                for curr_it in range(self.total_ensembles):
+                for curr_it in range(1):
                     self.set_current_template_in_network(curr_it) # just for setting the current ensemble
                     choices_scores, model_output, target_template_logits, lm_target, text_valid_length, encoder_hidden_states_or = self.single_pass(batch, current_content_key, current_choices_key)
                     logits_collection.append(choices_scores)
 
             logits_collection = torch.stack(logits_collection, dim=1)
-            # if self.template_weights != None:
-            #     mult_template_weights = self.template_weights.repeat(logits_collection.size(0), 1, 1).reshape(logits_collection.size(0), logits_collection.size(1), -1).to(logits_collection)
-            #     # print(mult_template_weights)
-            #     # print(mult_template_weights.size())
-            #     # print(logits_collection.size())
-            #     # print(logits_collection)
-            #     # print(mult_template_weights  * logits_collection)
-            #     majority = torch.sum(mult_template_weights  * logits_collection, dim=1)
-            # else:
             majority = torch.sum(logits_collection, dim=1)
             choices_scores = majority
 

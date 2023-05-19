@@ -744,9 +744,6 @@ def create_model(
                 gradient_checkpointing=OmegaConf.select(model_config, "gradient_checkpointing"),
                 pretrained=pretrained,
                 majority_voting=model_config.majority_voting if hasattr(model_config, "majority_voting") else False,
-                current_ensemble_iteration=current_iteration,
-                num_ensembles=model_config.num_ensembles if hasattr(model_config, "num_ensembles") else 1,
-                one_sample_at_a_time=model_config.one_sample_at_a_time if hasattr(model_config, "one_sample_at_a_time") else False,
                 calibrate_templates=model_config.calibrate_templates if hasattr(model_config, "calibrate_templates") else False,
             )
         elif model_name.lower().startswith(NUMERICAL_MLP):
@@ -886,27 +883,7 @@ def apply_model_adaptation(model: nn.Module, config: DictConfig, current_iterati
     config:
         A DictConfig object. The optimization config should be accessible by "config.optimization".
     """
-    if "ia3_lora_ensemble" in OmegaConf.select(config, "optimization.efficient_finetune"):
-        model, lora_layers = inject_ia3_lora_ensemble_to_linear_layer(
-            model=model,
-            lora_r=config.optimization.lora.r,
-            lora_alpha=config.optimization.lora.alpha,
-            module_filter=config.optimization.lora.module_filter,
-            filter=config.optimization.lora.filter,
-            num_ensemble=config.optimization.lora.num_ensemble,
-        )
-        load_pretrained=hasattr(config.optimization.lora, "use_pretrained_weights") and config.optimization.lora.use_pretrained_weights
-        pretrained_name=config.optimization.lora.pretrained_checkpoint_name if hasattr(config.optimization.lora, "pretrained_checkpoint_name") else None
-        if current_iteration == 0:
-            load_pretrained_weights(model, save_path, checkpoint_name, current_iteration, ensemble=True, load_pretrained=load_pretrained, pretrained_name=pretrained_name)   
-            for layer in lora_layers:
-                layer.enable_ensemble_weights()    
-        else:
-            for layer in lora_layers:
-                layer.enable_ensemble_weights()
-            load_pretrained_weights(model, save_path, checkpoint_name, current_iteration, ensemble=True, load_pretrained=load_pretrained, pretrained_name=pretrained_name)
-        load_pretrained_weights(model, save_path, checkpoint_name, current_iteration, ensemble=False, load_pretrained=load_pretrained, pretrained_name=pretrained_name)      
-    elif "ia3_lora" in  OmegaConf.select(config, "optimization.efficient_finetune"):
+    if "ia3_lora" in  OmegaConf.select(config, "optimization.efficient_finetune"):
         model = inject_ia3_lora_to_linear_layer(
                     model=model,
                     lora_r=config.optimization.lora.r,
@@ -917,15 +894,6 @@ def apply_model_adaptation(model: nn.Module, config: DictConfig, current_iterati
         load_pretrained=hasattr(config.optimization.lora, "use_pretrained_weights") and config.optimization.lora.use_pretrained_weights
         pretrained_name=config.optimization.lora.pretrained_checkpoint_name if hasattr(config.optimization.lora, "pretrained_checkpoint_name") else None
         load_pretrained_weights(model, save_path, checkpoint_name, current_iteration, ensemble=False, load_pretrained=load_pretrained, pretrained_name=pretrained_name)              
-    elif "lora_ensemble" in OmegaConf.select(config, "optimization.efficient_finetune"):
-        model = inject_lora_ensemble_to_linear_layer(
-            model=model,
-            lora_r=config.optimization.lora.r,
-            lora_alpha=config.optimization.lora.alpha,
-            module_filter=config.optimization.lora.module_filter,
-            filter=config.optimization.lora.filter,
-            num_ensemble=config.optimization.lora.num_ensemble,
-        )
     elif "lora" in OmegaConf.select(config, "optimization.efficient_finetune"):
         model = inject_lora_to_linear_layer(
             model=model,
@@ -937,24 +905,6 @@ def apply_model_adaptation(model: nn.Module, config: DictConfig, current_iterati
         load_pretrained=hasattr(config.optimization.lora, "use_pretrained_weights") and config.optimization.lora.use_pretrained_weights
         pretrained_name=config.optimization.lora.pretrained_checkpoint_name if hasattr(config.optimization.lora, "pretrained_checkpoint_name") else None
         load_pretrained_weights(model, save_path, checkpoint_name, current_iteration, ensemble=False, load_pretrained=load_pretrained, pretrained_name=pretrained_name)
-    elif "ia3_ensemble" in OmegaConf.select(config, "optimization.efficient_finetune"):
-        load_pretrained=hasattr(config.optimization.lora, "use_pretrained_weights") and config.optimization.lora.use_pretrained_weights
-        pretrained_name=config.optimization.lora.pretrained_checkpoint_name if hasattr(config.optimization.lora, "pretrained_checkpoint_name") else None
-        model, lora_layers = inject_ia3_ensemble_to_linear_layer(
-            model=model,
-            module_filter=config.optimization.lora.module_filter,
-            filter=config.optimization.lora.filter,
-            num_ensemble=config.optimization.lora.num_ensemble,
-        )
-        if current_iteration == 0:
-            load_pretrained_weights(model, save_path, checkpoint_name, current_iteration, ensemble=True, load_pretrained=load_pretrained, pretrained_name=pretrained_name)   
-            for layer in lora_layers:
-                layer.enable_ensemble_weights()    
-        else:
-            for layer in lora_layers:
-                layer.enable_ensemble_weights()
-            load_pretrained_weights(model, save_path, checkpoint_name, current_iteration, ensemble=True, load_pretrained=load_pretrained, pretrained_name=pretrained_name)
-
     elif "ia3" in OmegaConf.select(config, "optimization.efficient_finetune"):
         model = inject_ia3_to_linear_layer(
             model=model,

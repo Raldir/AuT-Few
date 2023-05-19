@@ -92,9 +92,6 @@ model:
     text_aug_detect_length: 10                # We perform text augmentation only if a text has more than text_detection_length words. It is used to differentiate text columns versus tabular columns that are treated as text.
     text_trivial_aug_maxscale: 0.0            # augmentation magnititude randomly drawn from [0, text_trivial_aug_maxscale]
     majority_voting: False
-    current_ensemble_iteration: 0
-    num_ensembles: 1
-    one_sample_at_a_time: False
     calibrate_templates: False
   timm_image:
     checkpoint_name: "swin_base_patch4_window7_224"

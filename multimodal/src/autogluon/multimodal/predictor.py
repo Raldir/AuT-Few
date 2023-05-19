@@ -290,12 +290,8 @@ class MultiModalPredictor:
         holdout_frac: Optional[float] = None,
         teacher_predictor: Union[str, MultiModalPredictor] = None,
         seed: Optional[int] = 123,
-        randomize_ensemble_seed = False,
-        one_sample_at_a_time = False,
-        randomize_samples = False,
         dataset_name = None,
         current_iteration = 0,
-        retrieve_templates= False,
         restrict_choices = False,
         hyperparameter_tune_kwargs: Optional[dict] = None,
     ):
@@ -441,71 +437,6 @@ class MultiModalPredictor:
 
         pl.seed_everything(seed, workers=True)
 
-        if randomize_samples and current_iteration > 0:
-            train_data = train_data_or.sample(frac=1, random_state=seed)
-
-        if one_sample_at_a_time:
-            # train_data = train_data.values.tolist()  
-            train_data = train_data.T.to_dict().values()
-            train_samples_new = []
-            for sample in train_data:
-                if retrieve_templates:
-                    if dataset_name in ["neurips_impact_statement_risks", "tweet_eval_hate", "one_stop_english", "semiconductor_org_types", "overruling", "twitter_complaints", "ade_corpus_v2", "banking_77", "terms_of_service"]:
-                        num_temp= 5
-                    elif dataset_name in ["tai_safety_research"]:
-                        num_temp= 2
-                    elif dataset_name in ["systematic_review_inclusion"]:
-                        num_temp= 1
-                    elif "anli" in dataset_name:
-                        num_temp = 5
-                    elif "rte" in dataset_name:
-                        num_temp = 5
-                    elif "cb" in dataset_name:
-                        num_temp = 5
-                    elif "wsc" in dataset_name:
-                        num_temp = 1 #CHECK THIS
-                    elif "wic" in dataset_name:
-                        num_temp = 1 #CHECK THIS
-                    elif "emotion" in dataset_name:
-                        num_temp = 5
-                    elif "enron_spam" in dataset_name:
-                        num_temp = 5
-                    elif "sst5" in dataset_name:
-                        num_temp = 5
-                    elif "amazon_counterfactual_en" in dataset_name:
-                        num_temp = 5
-                    elif "sentevalcr" in dataset_name:
-                        num_temp = 5
-                elif 'anli' in dataset_name:
-                    num_temp = 15
-                elif 'rte' in dataset_name:
-                    num_temp = 10
-                elif "cb" in dataset_name:
-                    num_temp = 15
-                elif "wic" in dataset_name:
-                    num_temp = 10
-                elif "wsc" in dataset_name:
-                    num_temp = 8
-                elif "emotion" in dataset_name:
-                    num_temp = 6
-                elif "enron_spam" in dataset_name:
-                    num_temp = 5
-                elif "sst5" in dataset_name:
-                    num_temp = 9
-                elif "amazon_counterfactual_en" in dataset_name:
-                    num_temp = 8
-                elif "sentevalcr" in dataset_name:
-                    num_temp = 9
-                else:
-                    num_temp = 1 # 1 template
-
-                for i in range(num_temp):
-                    train_samples_new.append(copy.deepcopy(sample))
-
-            logger.info(f"Duplicated Samples for One-Sample-at-a-time by: {num_temp}")
-            train_data = train_samples_new
-            train_data = pd.DataFrame(train_data)
-
         # Generate general info that's not config specific
         if tuning_data is None:
             if self._problem_type in [BINARY, MULTICLASS, CLASSIFICATION]:
@@ -536,6 +467,8 @@ class MultiModalPredictor:
             data=train_data,
             valid_data=tuning_data,
         )
+
+        # TODO: Hardcoded number of classes here, pass as argument instead or even better, fix at correct position.
         if dataset_name == 'banking_77':
             problem_type = MULTICLASS
             output_shape = 77
@@ -932,7 +865,6 @@ class MultiModalPredictor:
         hyperparameters: Optional[Union[str, Dict, List[str]]] = None,
         teacher_predictor: Union[str, MultiModalPredictor] = None,
         hpo_mode: bool = False,
-        current_iteration : int = False,
         **hpo_kwargs,
     ):
 
@@ -948,7 +880,6 @@ class MultiModalPredictor:
             num_classes=self._output_shape,
             num_numerical_columns=len(df_preprocessor.numerical_feature_names),
             num_categories=df_preprocessor.categorical_num_categories,
-            current_iteration = current_iteration,
             save_path = save_path,
         )
 
@@ -991,9 +922,6 @@ class MultiModalPredictor:
             train_data=train_df,
             val_data=val_df,
         )
-
-        print("VAL SET", len(val_df))
-
 
         train_dm_pred = BaseDataModule(
             df_preprocessor=df_preprocessor,
@@ -1156,7 +1084,6 @@ class MultiModalPredictor:
             warnings.filterwarnings("ignore", "Checkpoint directory .* exists and is not empty.")
             
             template_engine = data_processors[TEXT][0].template_engine
-
         
             model.calibrate_choices = True
             outputs = trainer.predict(task, datamodule=train_dm_pred)   
@@ -1192,7 +1119,6 @@ class MultiModalPredictor:
         hyperparameters: Optional[Union[str, Dict, List[str]]] = None,
         teacher_predictor: Union[str, MultiModalPredictor] = None,
         hpo_mode: bool = False,
-        current_iteration : int = False,
         restrict_choices = False,
         **hpo_kwargs,
     ):
@@ -1225,7 +1151,6 @@ class MultiModalPredictor:
 
         config = select_model(config=config, df_preprocessor=df_preprocessor)
 
-        # config.model.t_few.current_ensemble_iteration = current_iteration
 
         if self._data_processors is None:
             data_processors = init_data_processors(
@@ -1270,11 +1195,10 @@ class MultiModalPredictor:
                 hyperparameters=hyperparameters,
                 teacher_predictor=teacher_predictor,
                 hpo_mode=hpo_mode,
-                current_iteration=current_iteration,
                 hpo_kwargs=hpo_kwargs,
                 )
 
-                print(template_engine.possible_choices)
+                print("Computed choices to select from are: {}".format(template_engine.possible_choices))
 
                 if restrict_choices != "None":
                     if restrict_choices == "template-only":
@@ -1329,7 +1253,6 @@ class MultiModalPredictor:
                             hyperparameters=hyperparameters,
                             teacher_predictor=teacher_predictor,
                             hpo_mode=hpo_mode,
-                            current_iteration=current_iteration,
                         )
 
                         score_2, summed_prob_2 = self.fit_choice_selection(
@@ -1348,7 +1271,6 @@ class MultiModalPredictor:
                             hyperparameters=hyperparameters,
                             teacher_predictor=teacher_predictor,
                             hpo_mode=hpo_mode,
-                            current_iteration=current_iteration,
                         )
 
                         score_3, summed_prob_3 = self.fit_choice_selection(
@@ -1367,11 +1289,7 @@ class MultiModalPredictor:
                             hyperparameters=hyperparameters,
                             teacher_predictor=teacher_predictor,
                             hpo_mode=hpo_mode,
-                            current_iteration=current_iteration,
                         )
-
-                        # best_scores.append(score['f1'])
-                        # summed_probs.append(summed_prob)
 
                         best_scores.append((score['f1']  + score_2['f1'] + score_3['f1']) / 3)
                         summed_probs.append((summed_prob  + summed_prob_2 + summed_prob_3) / 3)
@@ -1381,21 +1299,14 @@ class MultiModalPredictor:
                     summed_probs = torch.stack(summed_probs)
                     summed_probs = F.normalize(summed_probs, p=1.0, dim=0)
                     
-                    # best_scores = [x[0] for x in best_scores]
-                    # summed_probs = [x[0] for x in summed_probs]
 
                     best_scores_prob = torch.nn.functional.softmax(torch.tensor(best_scores))
                     summed_probs_prob = torch.nn.functional.softmax(torch.tensor(summed_probs))
 
-                    print(best_scores_prob)
-                    print(summed_probs_prob)
-
                     best_scores = best_scores_prob + summed_probs_prob
                     best_scores = best_scores.tolist()
 
-                    print(best_scores)
-
-                    # best_scores = [x[0] + x[1] for  x in list(zip(summed_probs_prob + best_scores_prob))]
+                    print("Score for current configuration: ", best_scores)
 
                     best_score = max(best_scores)
                     best_choice_space = best_scores.index(best_score)
@@ -1415,12 +1326,10 @@ class MultiModalPredictor:
                 num_classes=self._output_shape,
                 num_numerical_columns=len(df_preprocessor.numerical_feature_names),
                 num_categories=df_preprocessor.categorical_num_categories,
-                current_iteration = current_iteration,
                 save_path = save_path,
             )
         else:  # continuing training
             model = self._model
-            self._model.current_ensemble_iteration = current_iteration
 
         pos_label = try_to_infer_pos_label(
             data_config=config.data,
@@ -1708,7 +1617,7 @@ class MultiModalPredictor:
         # save artifacts for the current running, except for model checkpoint, which will be saved in trainer
         self.save(save_path)
 
-        print("TEMPLATES ACTUALLY USED")
+        print("Final selection of templates and label descriptions:")
         for template in template_engine.templates:
             print(template.jinja)
             print(template.answer_choices)
@@ -1763,18 +1672,6 @@ class MultiModalPredictor:
                 ckpt_path=ckpt_path if resume else None,  # this is to resume training that was broken accidentally
             )
 
-
-            # model.calibrate_templates = True
-            # model.nll = []
-            # model.template_weights = None
-        
-
-            # outputs = trainer.predict(task, datamodule=train_dm_pred)
-
-            # score = evaluate_template(outputs)   
-            # model.compute_template_weighting()
-            # print("Templates calibrated.")
-
         if trainer.global_rank == 0:
             # We do not perform averaging checkpoint in the case of hpo for each trial
             # We only averaging the checkpoint of the best trial in the end in the master process
@@ -1808,7 +1705,6 @@ class MultiModalPredictor:
             hyperparameters: Optional[Union[str, Dict, List[str]]] = None,
             teacher_predictor: Union[str, MultiModalPredictor] = None,
             hpo_mode: bool = False,
-            current_iteration : int = False,
     ):
         config = self._config
         df_preprocessor = self._df_preprocessor
@@ -1822,7 +1718,6 @@ class MultiModalPredictor:
             num_classes=self._output_shape,
             num_numerical_columns=len(df_preprocessor.numerical_feature_names),
             num_categories=df_preprocessor.categorical_num_categories,
-            current_iteration = current_iteration,
             save_path = save_path,
         )
 

@@ -34,7 +34,6 @@ optimization:
     r: 8
     alpha: 8
     use_pretrained_weights: False
-    num_ensemble: 2
   loss_function: "auto" # The replaced loss for regresssion. Can only support loss function in torch.nn.
     # example
     # "BCEWithLogitsLoss" or "nn.BCEWithLogitsloss"

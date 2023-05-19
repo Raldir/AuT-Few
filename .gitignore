@@ -1,3 +1,13 @@
+#AuT-Few
+cache/
+data/
+experiments/
+!experiments/autfew.sh
+!experiments/tfew.sh
+lightning_logs/
+multimodal/src/autogluon/multimodal/data/templates_w_setfit/
+t_few/cache/
+
 # Extra
 *.params
 *.states
