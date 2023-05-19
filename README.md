@@ -8,11 +8,11 @@ However, designing prompts by hand for each task commonly requires domain knowle
 The code is extending a specific version of Autogluon, an AutoML library (LINK HERE), to implement AuT-Few. The following scripts install packages required for Autogluon, as well as packages specific for AuT-Few.
 ```
 # Run following scripts from the terminal:
-# ./t_few/init_environment.sh
-# ./t_few/activate_environment.sh 
-# ./t_few/setup_missing_libs.sh
-# ./full_install.sh
-# ./t_few/install_spacy.sh
+./t_few/init_environment.sh
+./t_few/activate_environment.sh 
+./t_few/setup_missing_libs.sh
+./full_install.sh
+./t_few/install_spacy.sh
 ```
 Additionally, it is necessary to specify the environment variable `HF_HOME`, i.e. where the hugginface_hub will locally store data.
 
@@ -29,7 +29,7 @@ The first argument specifies the number of samples to use for training, the seco
 Similarly, to run the T-Few baseline, run the script:
 
 ```
-./tfew.sh 0
+./tfew.sh 32 0
 ```
 
 ## Citation
@@ -40,12 +40,7 @@ XXX
 BibTeX entry:
 
 ```bibtex
-@inproceedings{agmultimodaltext,
-  title={Multimodal AutoML on Structured Tables with Text Fields},
-  author={Shi, Xingjian and Mueller, Jonas and Erickson, Nick and Li, Mu and Smola, Alex},
-  booktitle={8th ICML Workshop on Automated Machine Learning (AutoML)},
-  year={2021}
-}
+@inproceedings{ADD HERE}
 ```
 
 
