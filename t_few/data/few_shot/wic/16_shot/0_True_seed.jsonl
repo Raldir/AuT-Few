@@ -1,0 +1,32 @@
+{"word": "reaction", "sentence1": "A bad reaction to the medicine.", "sentence2": "The forces of reaction carried the election.", "start1": 6, "start2": 14, "end1": 14, "end2": 22, "idx": 1894, "label": 0}
+{"word": "bit", "sentence1": "He had a bit of good luck.", "sentence2": "A horse hates having a bit put in its mouth.", "start1": 9, "start2": 23, "end1": 12, "end2": 26, "idx": 3878, "label": 0}
+{"word": "stop", "sentence1": "Soon the rain will stop.", "sentence2": "The car stopped.", "start1": 19, "start2": 8, "end1": 23, "end2": 15, "idx": 1874, "label": 0}
+{"word": "absence", "sentence1": "He visited during my absence.", "sentence2": "Absence makes the heart grow fonder.", "start1": 21, "start2": 0, "end1": 28, "end2": 7, "idx": 3490, "label": 0}
+{"word": "clear", "sentence1": "Clear a debt.", "sentence2": "The sky cleared.", "start1": 0, "start2": 8, "end1": 5, "end2": 15, "idx": 1113, "label": 0}
+{"word": "piece", "sentence1": "He sacrificed a piece to get a strategic advantage.", "sentence2": "He wrote an interesting piece on Iran.", "start1": 16, "start2": 24, "end1": 21, "end2": 29, "idx": 1497, "label": 0}
+{"word": "break", "sentence1": "If the new teacher won't break, we'll add some stress.", "sentence2": "The clouds broke after the heavy downpour.", "start1": 25, "start2": 11, "end1": 30, "end2": 16, "idx": 5110, "label": 0}
+{"word": "raise", "sentence1": "Raise a smile.", "sentence2": "Chew with your mouth shut -- were you raised in a barn?", "start1": 0, "start2": 38, "end1": 5, "end2": 44, "idx": 2996, "label": 0}
+{"word": "life", "sentence1": "The life of this milk carton may be thousands of years in this landfill.", "sentence2": "There is no life on the moon.", "start1": 4, "start2": 12, "end1": 8, "end2": 16, "idx": 238, "label": 0}
+{"word": "post", "sentence1": "If you hurry you'll catch the post.", "sentence2": "This military post provides an important source of income for the town nearby.", "start1": 30, "start2": 14, "end1": 34, "end2": 18, "idx": 3667, "label": 0}
+{"word": "work", "sentence1": "Start from the bottom and work towards the top.", "sentence2": "The stitches of the hem worked loose after she wore the skirt many times.", "start1": 26, "start2": 24, "end1": 30, "end2": 30, "idx": 331, "label": 0}
+{"word": "behave", "sentence1": "Don't behave like a fool.", "sentence2": "The children must learn to behave.", "start1": 6, "start2": 27, "end1": 12, "end2": 33, "idx": 3384, "label": 0}
+{"word": "touch", "sentence1": "This dish could use a touch of garlic.", "sentence2": "At his touch the room filled with lights.", "start1": 22, "start2": 7, "end1": 27, "end2": 12, "idx": 1625, "label": 0}
+{"word": "leave", "sentence1": "At what time does your train leave?", "sentence2": "Her blood left a stain on the napkin.", "start1": 29, "start2": 10, "end1": 34, "end2": 14, "idx": 2512, "label": 0}
+{"word": "float", "sentence1": "Float the plaster.", "sentence2": "The balloon floated off into the distance.", "start1": 0, "start2": 12, "end1": 5, "end2": 19, "idx": 129, "label": 0}
+{"word": "return", "sentence1": "In return we gave them as good as we got.", "sentence2": "His gross income was enough that he had to file a tax return.", "start1": 3, "start2": 54, "end1": 9, "end2": 60, "idx": 2451, "label": 0}
+{"word": "keep", "sentence1": "I keep my specimens under glass to protect them.", "sentence2": "Keep on working!", "start1": 2, "start2": 0, "end1": 6, "end2": 4, "idx": 1945, "label": 1}
+{"word": "ability", "sentence1": "This wood has the ability to fight off insects, fungus, and mold for a considerable time.", "sentence2": "This phone has the ability to have its software upgraded wirelessly.", "start1": 18, "start2": 19, "end1": 25, "end2": 26, "idx": 3815, "label": 1}
+{"word": "school", "sentence1": "He walked to school every morning.", "sentence2": "The school was built in 1932.", "start1": 13, "start2": 4, "end1": 19, "end2": 10, "idx": 1927, "label": 1}
+{"word": "work", "sentence1": "I will work hard to improve my grades.", "sentence2": "He's working in a bar.", "start1": 7, "start2": 5, "end1": 11, "end2": 12, "idx": 3401, "label": 1}
+{"word": "play", "sentence1": "Play sports.", "sentence2": "Who's playing now?", "start1": 0, "start2": 6, "end1": 4, "end2": 13, "idx": 1160, "label": 1}
+{"word": "bit", "sentence1": "A horse hates having a bit put in its mouth.", "sentence2": "The horse was not accustomed to a bit.", "start1": 23, "start2": 34, "end1": 26, "end2": 37, "idx": 1568, "label": 1}
+{"word": "air", "sentence1": "Air pollution.", "sentence2": "A smell of chemicals in the air.", "start1": 0, "start2": 28, "end1": 3, "end2": 31, "idx": 5118, "label": 1}
+{"word": "leak", "sentence1": "He had to clean up the leak.", "sentence2": "A leak in a boat.", "start1": 23, "start2": 2, "end1": 27, "end2": 6, "idx": 2931, "label": 1}
+{"word": "shovel", "sentence1": "Shovel sand.", "sentence2": "He shovelled in the backyard all afternoon long.", "start1": 0, "start2": 3, "end1": 6, "end2": 12, "idx": 266, "label": 1}
+{"word": "boy", "sentence1": "The baby was a boy.", "sentence2": "Steve is a boy of 16.", "start1": 15, "start2": 11, "end1": 18, "end2": 14, "idx": 3595, "label": 1}
+{"word": "know", "sentence1": "She doesn't know this composer.", "sentence2": "I know him under a different name.", "start1": 12, "start2": 2, "end1": 16, "end2": 6, "idx": 390, "label": 1}
+{"word": "date", "sentence1": "US date: 05/24/08 = Tuesday, May 24th, 2008. UK date: 24/05/08 = Tuesday 24th May 2008.", "sentence2": "The date of a letter, of a will, of a deed, of a coin, etc.", "start1": 3, "start2": 4, "end1": 7, "end2": 8, "idx": 3256, "label": 1}
+{"word": "price", "sentence1": "The price of success is hard work.", "sentence2": "What price glory?", "start1": 4, "start2": 5, "end1": 9, "end2": 10, "idx": 1703, "label": 1}
+{"word": "relate", "sentence1": "I can not relate these events at all.", "sentence2": "I find it difficult to relate to others because i'm extremely introverted.", "start1": 10, "start2": 23, "end1": 16, "end2": 29, "idx": 2548, "label": 1}
+{"word": "clear", "sentence1": "Clear the leaves from the lawn.", "sentence2": "Clear snow from the road.", "start1": 0, "start2": 0, "end1": 5, "end2": 5, "idx": 154, "label": 1}
+{"word": "time", "sentence1": "This time he succeeded.", "sentence2": "He called four times.", "start1": 5, "start2": 15, "end1": 9, "end2": 20, "idx": 2466, "label": 1}

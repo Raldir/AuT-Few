@@ -1,0 +1,128 @@
+{"word": "hit", "sentence1": "The ball hit the fence.", "sentence2": "We hit Detroit by noon.", "start1": 9, "start2": 3, "end1": 12, "end2": 6, "idx": 993, "label": 0}
+{"word": "drop", "sentence1": "Drop him from the Republican ticket.", "sentence2": "Shop til you drop.", "start1": 0, "start2": 13, "end1": 4, "end2": 17, "idx": 4030, "label": 0}
+{"word": "stick", "sentence1": "The recipe calls for half a stick of butter.", "sentence2": "Fever left him weak on his sticks.", "start1": 28, "start2": 27, "end1": 33, "end2": 33, "idx": 3852, "label": 0}
+{"word": "number", "sentence1": "A number 13 shoe.", "sentence2": "This sweater is an all-wool number.", "start1": 2, "start2": 28, "end1": 8, "end2": 34, "idx": 1818, "label": 0}
+{"word": "carry", "sentence1": "These bonds carry warrants.", "sentence2": "She carries her ideas to the extreme.", "start1": 12, "start2": 4, "end1": 17, "end2": 11, "idx": 5347, "label": 0}
+{"word": "beat", "sentence1": "Beat a path through the forest.", "sentence2": "Beat one's breast.", "start1": 0, "start2": 0, "end1": 4, "end2": 4, "idx": 536, "label": 0}
+{"word": "run", "sentence1": "Don't run that software unless you have permission.", "sentence2": "Run rogue.", "start1": 6, "start2": 0, "end1": 9, "end2": 3, "idx": 792, "label": 0}
+{"word": "drive", "sentence1": "I drive to work every day.", "sentence2": "Drive a golf ball.", "start1": 2, "start2": 0, "end1": 7, "end2": 5, "idx": 4905, "label": 0}
+{"word": "screen", "sentence1": "Screen a film.", "sentence2": "Screen these samples.", "start1": 0, "start2": 0, "end1": 6, "end2": 6, "idx": 4766, "label": 0}
+{"word": "rustle", "sentence1": "Rustle cattle.", "sentence2": "The dry leaves were rustling in the breeze.", "start1": 0, "start2": 20, "end1": 6, "end2": 28, "idx": 4579, "label": 0}
+{"word": "reason", "sentence1": "The reason a steady state was never reached was that the back pressure built up too slowly.", "sentence2": "Mankind should develop reason above all other virtues.", "start1": 4, "start2": 23, "end1": 10, "end2": 29, "idx": 1576, "label": 0}
+{"word": "stand", "sentence1": "Stand the test of time.", "sentence2": "She stands 6 feet tall.", "start1": 0, "start2": 4, "end1": 5, "end2": 10, "idx": 1993, "label": 0}
+{"word": "compare", "sentence1": "This car does not compare with our line of Mercedes.", "sentence2": "You can't compare my problems and yours.", "start1": 18, "start2": 10, "end1": 25, "end2": 17, "idx": 2092, "label": 0}
+{"word": "kill", "sentence1": "Kill the engine.", "sentence2": "These new shoes are killing me!", "start1": 0, "start2": 20, "end1": 4, "end2": 27, "idx": 776, "label": 0}
+{"word": "do", "sentence1": "Do nothing.", "sentence2": "Will $100 do?", "start1": 0, "start2": 10, "end1": 2, "end2": 12, "idx": 2626, "label": 0}
+{"word": "strike", "sentence1": "The opponent refused to strike.", "sentence2": "In the fifth inning, the Giants struck, sending three runners home to win the game 5 to 2.", "start1": 24, "start2": 32, "end1": 30, "end2": 38, "idx": 4177, "label": 0}
+{"word": "line", "sentence1": "A dedicated line.", "sentence2": "The letter consisted of three short lines.", "start1": 12, "start2": 36, "end1": 16, "end2": 41, "idx": 1832, "label": 0}
+{"word": "action", "sentence1": "The piano had a very stiff action.", "sentence2": "Recent federal action undermined the segregationist position.", "start1": 27, "start2": 15, "end1": 33, "end2": 21, "idx": 3238, "label": 0}
+{"word": "bear", "sentence1": "Bear a heavy load.", "sentence2": "Bear a resemblance.", "start1": 0, "start2": 0, "end1": 4, "end2": 4, "idx": 4497, "label": 0}
+{"word": "strike", "sentence1": "We will strike a medal in your honour.", "sentence2": "The boxer struck the attacker dead.", "start1": 8, "start2": 10, "end1": 14, "end2": 16, "idx": 933, "label": 0}
+{"word": "have", "sentence1": "The only girl who would have him was the miller's daughter.", "sentence2": "We had a hard year last year, with the locust swarms and all that.", "start1": 24, "start2": 3, "end1": 28, "end2": 6, "idx": 3100, "label": 0}
+{"word": "find", "sentence1": "Find the product of two numbers.", "sentence2": "She found the time and energy to take care of her aging parents.", "start1": 0, "start2": 4, "end1": 4, "end2": 9, "idx": 5150, "label": 0}
+{"word": "hold", "sentence1": "To hold true.", "sentence2": "Hold that position behind the trees!", "start1": 3, "start2": 0, "end1": 7, "end2": 4, "idx": 5098, "label": 0}
+{"word": "stroke", "sentence1": "The pregnancy was a stroke of bad luck.", "sentence2": "She applied the paint in careful strokes.", "start1": 20, "start2": 33, "end1": 26, "end2": 40, "idx": 5062, "label": 0}
+{"word": "head", "sentence1": "This song keeps going through my head.", "sentence2": "The head of the whole operation.", "start1": 33, "start2": 4, "end1": 37, "end2": 8, "idx": 1169, "label": 0}
+{"word": "school", "sentence1": "He didn't miss a single day of school.", "sentence2": "He walked to school every morning.", "start1": 31, "start2": 13, "end1": 37, "end2": 19, "idx": 4408, "label": 0}
+{"word": "come", "sentence1": "The sleeves come to your knuckles.", "sentence2": "He came from France.", "start1": 12, "start2": 3, "end1": 16, "end2": 7, "idx": 1183, "label": 0}
+{"word": "draw", "sentence1": "Draw on a cigarette.", "sentence2": "She drew $2,000 from the account.", "start1": 0, "start2": 4, "end1": 4, "end2": 8, "idx": 2478, "label": 0}
+{"word": "swing", "sentence1": "The soccer player began to swing at the referee.", "sentence2": "He swung his left fist.", "start1": 27, "start2": 3, "end1": 32, "end2": 8, "idx": 2044, "label": 0}
+{"word": "hold", "sentence1": "Hold your tongue.", "sentence2": "About a dozen animals were held inside the stockade.", "start1": 0, "start2": 27, "end1": 4, "end2": 31, "idx": 3429, "label": 0}
+{"word": "respect", "sentence1": "Out of respect for his privacy.", "sentence2": "She lost all respect for him.", "start1": 7, "start2": 13, "end1": 14, "end2": 20, "idx": 2991, "label": 0}
+{"word": "deliver", "sentence1": "Deliver the mail.", "sentence2": "The guard delivered the criminal to the police.", "start1": 0, "start2": 10, "end1": 7, "end2": 19, "idx": 5223, "label": 0}
+{"word": "fire", "sentence1": "There was a fire at the school last night and the whole place burned down.", "sentence2": "We sat around the fire singing songs and telling stories.", "start1": 12, "start2": 18, "end1": 16, "end2": 22, "idx": 4167, "label": 0}
+{"word": "treat", "sentence1": "She was tempted to treat the whole affair as a joke.", "sentence2": "The patient must be treated right away or she will die.", "start1": 19, "start2": 20, "end1": 24, "end2": 27, "idx": 2892, "label": 0}
+{"word": "have", "sentence1": "I don't have any money left.", "sentence2": "What do we have here?", "start1": 8, "start2": 11, "end1": 12, "end2": 15, "idx": 888, "label": 0}
+{"word": "stay", "sentence1": "Stay alone.", "sentence2": "After graduation, she stayed on in Cambridge as a student adviser.", "start1": 0, "start2": 22, "end1": 4, "end2": 28, "idx": 1077, "label": 0}
+{"word": "part", "sentence1": "He tried to sing the tenor part.", "sentence2": "His part was right in the middle.", "start1": 27, "start2": 4, "end1": 31, "end2": 8, "idx": 5259, "label": 0}
+{"word": "work", "sentence1": "The soft metal works well.", "sentence2": "Start from the bottom and work towards the top.", "start1": 15, "start2": 26, "end1": 20, "end2": 30, "idx": 1631, "label": 0}
+{"word": "go", "sentence1": "These ugly billboards have to go!", "sentence2": "The day went well until I got your call.", "start1": 30, "start2": 8, "end1": 32, "end2": 12, "idx": 1402, "label": 0}
+{"word": "hand", "sentence1": "On the one hand ..., but on the other hand ...", "sentence2": "All hands on deck.", "start1": 11, "start2": 4, "end1": 15, "end2": 9, "idx": 757, "label": 0}
+{"word": "try", "sentence1": "You are trying my patience.", "sentence2": "Try the yak butter.", "start1": 8, "start2": 0, "end1": 14, "end2": 3, "idx": 148, "label": 0}
+{"word": "make", "sentence1": "Make a stir.", "sentence2": "Make friends.", "start1": 0, "start2": 0, "end1": 4, "end2": 4, "idx": 1586, "label": 0}
+{"word": "tip", "sentence1": "Tip the screen upward.", "sentence2": "Tip artichokes.", "start1": 0, "start2": 0, "end1": 3, "end2": 3, "idx": 3242, "label": 0}
+{"word": "wear", "sentence1": "Wear one's hair in a certain way.", "sentence2": "He always wears a smile.", "start1": 0, "start2": 10, "end1": 4, "end2": 15, "idx": 4603, "label": 0}
+{"word": "light", "sentence1": "Hey, buddy, you got a light?", "sentence2": "Although he saw it in a different light, he still did not understand.", "start1": 22, "start2": 34, "end1": 27, "end2": 39, "idx": 264, "label": 0}
+{"word": "set", "sentence1": "His instructions deliberately gave them the wrong set.", "sentence2": "A set of tools.", "start1": 50, "start2": 2, "end1": 53, "end2": 5, "idx": 4977, "label": 0}
+{"word": "go", "sentence1": "Messages must go through diplomatic channels.", "sentence2": "Get going!", "start1": 14, "start2": 4, "end1": 16, "end2": 9, "idx": 5201, "label": 0}
+{"word": "face", "sentence1": "An angry face.", "sentence2": "He looked out at a roomful of faces.", "start1": 9, "start2": 30, "end1": 13, "end2": 35, "idx": 4400, "label": 0}
+{"word": "throw", "sentence1": "Have, throw, or make a party.", "sentence2": "Throw a shoe.", "start1": 6, "start2": 0, "end1": 11, "end2": 5, "idx": 5308, "label": 0}
+{"word": "dress", "sentence1": "Dress the windows.", "sentence2": "Dress the victim's wounds.", "start1": 0, "start2": 0, "end1": 5, "end2": 5, "idx": 1115, "label": 0}
+{"word": "drift", "sentence1": "Don't drift from the set course.", "sentence2": "The stock market drifted upward.", "start1": 6, "start2": 17, "end1": 11, "end2": 24, "idx": 1501, "label": 0}
+{"word": "life", "sentence1": "The oceans are teeming with life.", "sentence2": "Social life.", "start1": 28, "start2": 7, "end1": 32, "end2": 11, "idx": 3119, "label": 0}
+{"word": "close", "sentence1": "Close up an umbrella.", "sentence2": "Her arms closed around her long lost relative.", "start1": 0, "start2": 9, "end1": 5, "end2": 15, "idx": 2717, "label": 0}
+{"word": "drive", "sentence1": "We drive the turnpike to work.", "sentence2": "The amplifier drives the tube.", "start1": 3, "start2": 14, "end1": 8, "end2": 20, "idx": 3785, "label": 0}
+{"word": "satellite", "sentence1": "The Moon is a natural satellite of the Earth.", "sentence2": "Many telecommunication satellites orbit at 36000 km above the equator.", "start1": 22, "start2": 23, "end1": 31, "end2": 33, "idx": 1786, "label": 0}
+{"word": "catch", "sentence1": "The fashion did not catch.", "sentence2": "He caught the allusion in her glance.", "start1": 20, "start2": 3, "end1": 25, "end2": 9, "idx": 392, "label": 0}
+{"word": "call", "sentence1": "Call a football game.", "sentence2": "She was called into the director's office.", "start1": 0, "start2": 8, "end1": 4, "end2": 14, "idx": 132, "label": 0}
+{"word": "line", "sentence1": "They were arrayed in line of battle.", "sentence2": "He drew a line on the chart.", "start1": 21, "start2": 10, "end1": 25, "end2": 14, "idx": 1785, "label": 0}
+{"word": "play", "sentence1": "Insiders said the company's stock was in play.", "sentence2": "The play of light on the water.", "start1": 41, "start2": 4, "end1": 45, "end2": 8, "idx": 4943, "label": 0}
+{"word": "take", "sentence1": "Take a risk.", "sentence2": "I'll take that plate off the table.", "start1": 0, "start2": 5, "end1": 4, "end2": 9, "idx": 3951, "label": 0}
+{"word": "run", "sentence1": "Run rogue.", "sentence2": "Run to the store!", "start1": 0, "start2": 0, "end1": 3, "end2": 3, "idx": 994, "label": 0}
+{"word": "conflict", "sentence1": "The familiar conflict between Republicans and Democrats.", "sentence2": "His conflict of interest made him ineligible for the post.", "start1": 13, "start2": 4, "end1": 21, "end2": 12, "idx": 1849, "label": 0}
+{"word": "line", "sentence1": "Toe the line.", "sentence2": "Historians can only point out those lines for which evidence is available.", "start1": 8, "start2": 36, "end1": 12, "end2": 41, "idx": 516, "label": 0}
+{"word": "put", "sentence1": "He put all his efforts into this job.", "sentence2": "I wouldn't put it that way.", "start1": 3, "start2": 11, "end1": 6, "end2": 14, "idx": 2105, "label": 0}
+{"word": "school", "sentence1": "Our children attend a public school in our neighborhood.", "sentence2": "Harvard University is a famous American postsecondary school.", "start1": 29, "start2": 54, "end1": 35, "end2": 60, "idx": 1034, "label": 1}
+{"word": "licking", "sentence1": "Our football team took a licking last night.", "sentence2": "They suffered a convincing licking.", "start1": 25, "start2": 27, "end1": 32, "end2": 34, "idx": 4027, "label": 1}
+{"word": "play", "sentence1": "I've practiced the piano off and on, and I still can't play very well.", "sentence2": "He plays the flute.", "start1": 55, "start2": 3, "end1": 59, "end2": 8, "idx": 3777, "label": 1}
+{"word": "grace", "sentence1": "I'm so grateful to God for the grace that He has given me.", "sentence2": "God's grace is manifested in the salvation of sinners.", "start1": 31, "start2": 6, "end1": 36, "end2": 11, "idx": 1893, "label": 1}
+{"word": "refund", "sentence1": "A governor, that had pillaged the people, was sentenced to refund what he had wrongfully taken. -- L'Estrange.", "sentence2": "If you find this computer for sale anywhere at a lower price, we'll refund you the difference.", "start1": 59, "start2": 68, "end1": 65, "end2": 74, "idx": 5360, "label": 1}
+{"word": "thing", "sentence1": "This thing has got to end.", "sentence2": "It is a remarkable thing.", "start1": 5, "start2": 19, "end1": 10, "end2": 24, "idx": 588, "label": 1}
+{"word": "skin", "sentence1": "Your skin is the largest organ of your body.", "sentence2": "He is so disgusting he makes my skin crawl.", "start1": 5, "start2": 32, "end1": 9, "end2": 36, "idx": 856, "label": 1}
+{"word": "time", "sentence1": "Okay, but this is the last time. No more after that!", "sentence2": "He called four times.", "start1": 27, "start2": 15, "end1": 31, "end2": 20, "idx": 4880, "label": 1}
+{"word": "copy", "sentence1": "She made a copy of the designer dress.", "sentence2": "The clone was a copy of its ancestor.", "start1": 11, "start2": 16, "end1": 15, "end2": 20, "idx": 4731, "label": 1}
+{"word": "room", "sentence1": "Room to pass.", "sentence2": "There wasn't that much elbow room in the aircraft.", "start1": 0, "start2": 29, "end1": 4, "end2": 33, "idx": 4525, "label": 1}
+{"word": "foot", "sentence1": "Curled up on the foot of the bed.", "sentence2": "The foot of the mountain.", "start1": 17, "start2": 4, "end1": 21, "end2": 8, "idx": 1649, "label": 1}
+{"word": "survey", "sentence1": "Under his proud survey the city lies. -- Sir John Denham.", "sentence2": "His survey of the battlefield was limited.", "start1": 16, "start2": 4, "end1": 22, "end2": 10, "idx": 2035, "label": 1}
+{"word": "dwelling", "sentence1": "He built a modest dwelling near the pond.", "sentence2": "I was doing dwelling in the cave.", "start1": 18, "start2": 12, "end1": 26, "end2": 20, "idx": 2154, "label": 1}
+{"word": "strike", "sentence1": "The opponent refused to strike.", "sentence2": "The teacher struck the child.", "start1": 24, "start2": 12, "end1": 30, "end2": 18, "idx": 830, "label": 1}
+{"word": "shed", "sentence1": "Shed your clothes.", "sentence2": "He shed his image as a pushy boss.", "start1": 0, "start2": 3, "end1": 4, "end2": 7, "idx": 2644, "label": 1}
+{"word": "moon", "sentence1": "Men first stepped on the moon in 1969.", "sentence2": "The average distance to the Moon is 384,400 kilometers.", "start1": 25, "start2": 28, "end1": 29, "end2": 32, "idx": 4191, "label": 1}
+{"word": "life", "sentence1": "He gave up on life.", "sentence2": "Having experienced both, the vampire decided that he preferred (un)death to life.", "start1": 14, "start2": 76, "end1": 18, "end2": 80, "idx": 1904, "label": 1}
+{"word": "control", "sentence1": "The timing and control of his movements were unimpaired.", "sentence2": "He had lost control of his sphincters.", "start1": 15, "start2": 12, "end1": 22, "end2": 19, "idx": 3128, "label": 1}
+{"word": "disposition", "sentence1": "I have little disposition now to do as you say.", "sentence2": "Salt has a disposition to dissolve in water.", "start1": 14, "start2": 11, "end1": 25, "end2": 22, "idx": 4452, "label": 1}
+{"word": "order", "sentence1": "Law and order.", "sentence2": "The house is in order.", "start1": 8, "start2": 16, "end1": 13, "end2": 21, "idx": 983, "label": 1}
+{"word": "body", "sentence1": "A body of law.", "sentence2": "A body of precedents.", "start1": 2, "start2": 2, "end1": 6, "end2": 6, "idx": 3021, "label": 1}
+{"word": "truth", "sentence1": "The truth is that he didn't want to do it.", "sentence2": "At last he knew the truth.", "start1": 4, "start2": 20, "end1": 9, "end2": 25, "idx": 5151, "label": 1}
+{"word": "war", "sentence1": "The war against crime.", "sentence2": "The \"war on terror\" is a campaign against terrorist crime.", "start1": 4, "start2": 5, "end1": 7, "end2": 8, "idx": 5100, "label": 1}
+{"word": "side", "sentence1": "He turned the box over to examine the bottom side.", "sentence2": "A cube has six sides.", "start1": 45, "start2": 15, "end1": 49, "end2": 20, "idx": 5069, "label": 1}
+{"word": "be", "sentence1": "When will the meeting be?", "sentence2": "It is almost eight.", "start1": 22, "start2": 3, "end1": 24, "end2": 5, "idx": 1211, "label": 1}
+{"word": "volume", "sentence1": "The gas expanded to twice its original volume.", "sentence2": "The volume of ticket sales decreased this week.", "start1": 39, "start2": 4, "end1": 45, "end2": 10, "idx": 4366, "label": 1}
+{"word": "keep", "sentence1": "Keep open the possibility of a merger.", "sentence2": "Keep my job for me while I give birth.", "start1": 0, "start2": 0, "end1": 4, "end2": 4, "idx": 1228, "label": 1}
+{"word": "note", "sentence1": "It ended on a sour note.", "sentence2": "He detected a note of sarcasm.", "start1": 19, "start2": 14, "end1": 23, "end2": 18, "idx": 2495, "label": 1}
+{"word": "mire", "sentence1": "Caught in the mire of poverty.", "sentence2": "The country is still trying to climb out of the mire left by its previous president.", "start1": 14, "start2": 48, "end1": 18, "end2": 52, "idx": 2097, "label": 1}
+{"word": "shot", "sentence1": "A good shot requires good balance and tempo.", "sentence2": "He left me an almost impossible shot.", "start1": 7, "start2": 32, "end1": 11, "end2": 36, "idx": 3302, "label": 1}
+{"word": "dig", "sentence1": "Dig the oars into the water.", "sentence2": "Dig your foot into the floor.", "start1": 0, "start2": 0, "end1": 3, "end2": 3, "idx": 2922, "label": 1}
+{"word": "play", "sentence1": "Play cards.", "sentence2": "Who's playing now?", "start1": 0, "start2": 6, "end1": 4, "end2": 13, "idx": 5240, "label": 1}
+{"word": "connection", "sentence1": "The connection between overeating and obesity.", "sentence2": "My headache has no connection with me going out last night.", "start1": 4, "start2": 19, "end1": 14, "end2": 29, "idx": 4179, "label": 1}
+{"word": "business", "sentence1": "Business is good today.", "sentence2": "Business has been slow lately.", "start1": 0, "start2": 0, "end1": 8, "end2": 8, "idx": 2843, "label": 1}
+{"word": "come", "sentence1": "Come out of the closet!", "sentence2": "He came through the door.", "start1": 0, "start2": 3, "end1": 4, "end2": 7, "idx": 937, "label": 1}
+{"word": "play", "sentence1": "We saw a two-act play in the theatre.", "sentence2": "He wrote several plays but only one was produced on Broadway.", "start1": 17, "start2": 17, "end1": 21, "end2": 22, "idx": 1110, "label": 1}
+{"word": "blip", "sentence1": "Renewed jitters in the wake of a blip in retail sales.", "sentence2": "The market had one bad blip today.", "start1": 33, "start2": 23, "end1": 37, "end2": 27, "idx": 5277, "label": 1}
+{"word": "roam", "sentence1": "The cattle roam across the prairie.", "sentence2": "The gypsies roamed the woods.", "start1": 11, "start2": 12, "end1": 15, "end2": 18, "idx": 1706, "label": 1}
+{"word": "burn", "sentence1": "To burn the mouth with pepper.", "sentence2": "The iron burnt a hole in my dress.", "start1": 3, "start2": 9, "end1": 7, "end2": 14, "idx": 1436, "label": 1}
+{"word": "opening", "sentence1": "There was a small opening between the trees.", "sentence2": "A salamander darted out of an opening in the rocks.", "start1": 18, "start2": 30, "end1": 25, "end2": 37, "idx": 818, "label": 1}
+{"word": "plug", "sentence1": "Plug the hole.", "sentence2": "He attempted to plug the leaks with some caulk.", "start1": 0, "start2": 16, "end1": 4, "end2": 20, "idx": 177, "label": 1}
+{"word": "sing", "sentence1": "I really want to sing in the school choir.", "sentence2": "She was singing while she was cooking.", "start1": 17, "start2": 8, "end1": 21, "end2": 15, "idx": 1655, "label": 1}
+{"word": "sex", "sentence1": "We had sex in the back seat.", "sentence2": "(The believers ... those ...) who abstain from sex.", "start1": 7, "start2": 47, "end1": 10, "end2": 50, "idx": 3130, "label": 1}
+{"word": "see", "sentence1": "The minister doesn't see anybody before noon.", "sentence2": "The doctor will see you now.", "start1": 21, "start2": 16, "end1": 24, "end2": 19, "idx": 4550, "label": 1}
+{"word": "whet", "sentence1": "Whet my appetite.", "sentence2": "To whet one's appetite or one's courage.", "start1": 0, "start2": 3, "end1": 4, "end2": 7, "idx": 305, "label": 1}
+{"word": "wrestle", "sentence1": "They had a fierce wrestle.", "sentence2": "We watched his grappling and wrestling with the bully.", "start1": 18, "start2": 29, "end1": 25, "end2": 38, "idx": 4999, "label": 1}
+{"word": "way", "sentence1": "Do you know the way to the airport?", "sentence2": "He said he was looking for the way out.", "start1": 16, "start2": 31, "end1": 19, "end2": 34, "idx": 5204, "label": 1}
+{"word": "plagiarism", "sentence1": "Even if it's not illegal, plagiarism is usually frowned upon.", "sentence2": "Copy from one, it's plagiarism. Copy from two, it's research.", "start1": 26, "start2": 20, "end1": 36, "end2": 30, "idx": 4360, "label": 1}
+{"word": "field", "sentence1": "Gold field.", "sentence2": "He longed for the fields of his youth.", "start1": 5, "start2": 18, "end1": 10, "end2": 24, "idx": 5313, "label": 1}
+{"word": "carry", "sentence1": "Carry the suitcases to the car.", "sentence2": "Amanda carried the package.", "start1": 0, "start2": 7, "end1": 5, "end2": 14, "idx": 1161, "label": 1}
+{"word": "block", "sentence1": "The store is huge, occupying an entire city block.", "sentence2": "He lives in the next block.", "start1": 44, "start2": 21, "end1": 49, "end2": 26, "idx": 1571, "label": 1}
+{"word": "folk", "sentence1": "They're just country folk.", "sentence2": "Folks around here drink moonshine.", "start1": 21, "start2": 0, "end1": 25, "end2": 5, "idx": 3036, "label": 1}
+{"word": "head", "sentence1": "They shot 20 head of quail.", "sentence2": "A reduction in the assessment per head of sheep.", "start1": 13, "start2": 34, "end1": 17, "end2": 38, "idx": 2694, "label": 1}
+{"word": "sign", "sentence1": "Those clouds show little sign of raining soon.", "sentence2": "He showed signs of strain.", "start1": 25, "start2": 10, "end1": 29, "end2": 15, "idx": 3717, "label": 1}
+{"word": "experience", "sentence1": "It was an experience he would not soon forget.", "sentence2": "He had a religious experience.", "start1": 10, "start2": 19, "end1": 20, "end2": 29, "idx": 1861, "label": 1}
+{"word": "life", "sentence1": "City life.", "sentence2": "Get a life.", "start1": 5, "start2": 6, "end1": 9, "end2": 10, "idx": 447, "label": 1}
+{"word": "sign", "sentence1": "Their angry expressions were a clear sign they didn't want to talk.", "sentence2": "Those clouds show little sign of raining soon.", "start1": 37, "start2": 25, "end1": 41, "end2": 29, "idx": 159, "label": 1}
+{"word": "strip", "sentence1": "Strip a wall of its wallpaper.", "sentence2": "Norm will strip the old varnish before painting the chair.", "start1": 0, "start2": 10, "end1": 5, "end2": 15, "idx": 1860, "label": 1}
+{"word": "apparition", "sentence1": "The apparition of Lawyer Clippurse occasioned much speculation in that portion of the world. -- Sir W. Scott.", "sentence2": "Natives were amazed at the apparition of this white stranger.", "start1": 4, "start2": 27, "end1": 14, "end2": 37, "idx": 4926, "label": 1}
+{"word": "catch", "sentence1": "Catch one's breath.", "sentence2": "Catch some sleep.", "start1": 0, "start2": 0, "end1": 5, "end2": 5, "idx": 3904, "label": 1}
+{"word": "pull", "sentence1": "Pull the trigger of the gun.", "sentence2": "Pull the handle towards you.", "start1": 0, "start2": 0, "end1": 4, "end2": 4, "idx": 1036, "label": 1}
+{"word": "distance", "sentence1": "If that happens it will be at some distance in the future.", "sentence2": "At a distance of ten years he had forgotten many of the details.", "start1": 35, "start2": 5, "end1": 43, "end2": 13, "idx": 1913, "label": 1}
+{"word": "reaction", "sentence1": "He was pleased by the audience's reaction to his performance.", "sentence2": "John feared his mother's reaction when she saw the broken lamp.", "start1": 33, "start2": 25, "end1": 41, "end2": 33, "idx": 560, "label": 1}
+{"word": "admit", "sentence1": "To admit a serious thought into the mind.", "sentence2": "She admitted us here.", "start1": 3, "start2": 4, "end1": 8, "end2": 12, "idx": 2168, "label": 1}

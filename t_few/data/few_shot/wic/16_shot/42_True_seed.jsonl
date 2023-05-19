@@ -1,0 +1,32 @@
+{"word": "hit", "sentence1": "The ball hit the fence.", "sentence2": "We hit Detroit by noon.", "start1": 9, "start2": 3, "end1": 12, "end2": 6, "idx": 993, "label": 0}
+{"word": "drop", "sentence1": "Drop him from the Republican ticket.", "sentence2": "Shop til you drop.", "start1": 0, "start2": 13, "end1": 4, "end2": 17, "idx": 4030, "label": 0}
+{"word": "stick", "sentence1": "The recipe calls for half a stick of butter.", "sentence2": "Fever left him weak on his sticks.", "start1": 28, "start2": 27, "end1": 33, "end2": 33, "idx": 3852, "label": 0}
+{"word": "number", "sentence1": "A number 13 shoe.", "sentence2": "This sweater is an all-wool number.", "start1": 2, "start2": 28, "end1": 8, "end2": 34, "idx": 1818, "label": 0}
+{"word": "carry", "sentence1": "These bonds carry warrants.", "sentence2": "She carries her ideas to the extreme.", "start1": 12, "start2": 4, "end1": 17, "end2": 11, "idx": 5347, "label": 0}
+{"word": "beat", "sentence1": "Beat a path through the forest.", "sentence2": "Beat one's breast.", "start1": 0, "start2": 0, "end1": 4, "end2": 4, "idx": 536, "label": 0}
+{"word": "run", "sentence1": "Don't run that software unless you have permission.", "sentence2": "Run rogue.", "start1": 6, "start2": 0, "end1": 9, "end2": 3, "idx": 792, "label": 0}
+{"word": "drive", "sentence1": "I drive to work every day.", "sentence2": "Drive a golf ball.", "start1": 2, "start2": 0, "end1": 7, "end2": 5, "idx": 4905, "label": 0}
+{"word": "screen", "sentence1": "Screen a film.", "sentence2": "Screen these samples.", "start1": 0, "start2": 0, "end1": 6, "end2": 6, "idx": 4766, "label": 0}
+{"word": "rustle", "sentence1": "Rustle cattle.", "sentence2": "The dry leaves were rustling in the breeze.", "start1": 0, "start2": 20, "end1": 6, "end2": 28, "idx": 4579, "label": 0}
+{"word": "reason", "sentence1": "The reason a steady state was never reached was that the back pressure built up too slowly.", "sentence2": "Mankind should develop reason above all other virtues.", "start1": 4, "start2": 23, "end1": 10, "end2": 29, "idx": 1576, "label": 0}
+{"word": "stand", "sentence1": "Stand the test of time.", "sentence2": "She stands 6 feet tall.", "start1": 0, "start2": 4, "end1": 5, "end2": 10, "idx": 1993, "label": 0}
+{"word": "compare", "sentence1": "This car does not compare with our line of Mercedes.", "sentence2": "You can't compare my problems and yours.", "start1": 18, "start2": 10, "end1": 25, "end2": 17, "idx": 2092, "label": 0}
+{"word": "kill", "sentence1": "Kill the engine.", "sentence2": "These new shoes are killing me!", "start1": 0, "start2": 20, "end1": 4, "end2": 27, "idx": 776, "label": 0}
+{"word": "do", "sentence1": "Do nothing.", "sentence2": "Will $100 do?", "start1": 0, "start2": 10, "end1": 2, "end2": 12, "idx": 2626, "label": 0}
+{"word": "strike", "sentence1": "The opponent refused to strike.", "sentence2": "In the fifth inning, the Giants struck, sending three runners home to win the game 5 to 2.", "start1": 24, "start2": 32, "end1": 30, "end2": 38, "idx": 4177, "label": 0}
+{"word": "school", "sentence1": "Our children attend a public school in our neighborhood.", "sentence2": "Harvard University is a famous American postsecondary school.", "start1": 29, "start2": 54, "end1": 35, "end2": 60, "idx": 1034, "label": 1}
+{"word": "licking", "sentence1": "Our football team took a licking last night.", "sentence2": "They suffered a convincing licking.", "start1": 25, "start2": 27, "end1": 32, "end2": 34, "idx": 4027, "label": 1}
+{"word": "play", "sentence1": "I've practiced the piano off and on, and I still can't play very well.", "sentence2": "He plays the flute.", "start1": 55, "start2": 3, "end1": 59, "end2": 8, "idx": 3777, "label": 1}
+{"word": "grace", "sentence1": "I'm so grateful to God for the grace that He has given me.", "sentence2": "God's grace is manifested in the salvation of sinners.", "start1": 31, "start2": 6, "end1": 36, "end2": 11, "idx": 1893, "label": 1}
+{"word": "refund", "sentence1": "A governor, that had pillaged the people, was sentenced to refund what he had wrongfully taken. -- L'Estrange.", "sentence2": "If you find this computer for sale anywhere at a lower price, we'll refund you the difference.", "start1": 59, "start2": 68, "end1": 65, "end2": 74, "idx": 5360, "label": 1}
+{"word": "thing", "sentence1": "This thing has got to end.", "sentence2": "It is a remarkable thing.", "start1": 5, "start2": 19, "end1": 10, "end2": 24, "idx": 588, "label": 1}
+{"word": "skin", "sentence1": "Your skin is the largest organ of your body.", "sentence2": "He is so disgusting he makes my skin crawl.", "start1": 5, "start2": 32, "end1": 9, "end2": 36, "idx": 856, "label": 1}
+{"word": "time", "sentence1": "Okay, but this is the last time. No more after that!", "sentence2": "He called four times.", "start1": 27, "start2": 15, "end1": 31, "end2": 20, "idx": 4880, "label": 1}
+{"word": "copy", "sentence1": "She made a copy of the designer dress.", "sentence2": "The clone was a copy of its ancestor.", "start1": 11, "start2": 16, "end1": 15, "end2": 20, "idx": 4731, "label": 1}
+{"word": "room", "sentence1": "Room to pass.", "sentence2": "There wasn't that much elbow room in the aircraft.", "start1": 0, "start2": 29, "end1": 4, "end2": 33, "idx": 4525, "label": 1}
+{"word": "foot", "sentence1": "Curled up on the foot of the bed.", "sentence2": "The foot of the mountain.", "start1": 17, "start2": 4, "end1": 21, "end2": 8, "idx": 1649, "label": 1}
+{"word": "survey", "sentence1": "Under his proud survey the city lies. -- Sir John Denham.", "sentence2": "His survey of the battlefield was limited.", "start1": 16, "start2": 4, "end1": 22, "end2": 10, "idx": 2035, "label": 1}
+{"word": "dwelling", "sentence1": "He built a modest dwelling near the pond.", "sentence2": "I was doing dwelling in the cave.", "start1": 18, "start2": 12, "end1": 26, "end2": 20, "idx": 2154, "label": 1}
+{"word": "strike", "sentence1": "The opponent refused to strike.", "sentence2": "The teacher struck the child.", "start1": 24, "start2": 12, "end1": 30, "end2": 18, "idx": 830, "label": 1}
+{"word": "shed", "sentence1": "Shed your clothes.", "sentence2": "He shed his image as a pushy boss.", "start1": 0, "start2": 3, "end1": 4, "end2": 7, "idx": 2644, "label": 1}
+{"word": "moon", "sentence1": "Men first stepped on the moon in 1969.", "sentence2": "The average distance to the Moon is 384,400 kilometers.", "start1": 25, "start2": 28, "end1": 29, "end2": 32, "idx": 4191, "label": 1}
